@@ -30,6 +30,7 @@ public class ProductService {
     public ResponseEntity<String> addProduct(Product product) {
         try {
             productDao.save(product);
+            logger.info("Product Added Successfully");
             return new ResponseEntity<>("Success", HttpStatus.CREATED);
         } catch (Exception e){
             logger.error("Exception occurred while addProduct", e);

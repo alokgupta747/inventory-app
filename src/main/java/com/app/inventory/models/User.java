@@ -8,11 +8,12 @@ import lombok.Data;
 
 @Data
 @Entity
-public class Seller {
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
-    private Long mobile;
+    private String type;
+    private String mobile;
 }

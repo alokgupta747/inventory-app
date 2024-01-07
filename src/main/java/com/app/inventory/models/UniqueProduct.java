@@ -5,12 +5,13 @@ import lombok.Data;
 
 @Data
 @Entity
-public class Product {
+public class UniqueProduct {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String name;
-    private String type;
-    private Integer count;
+    private String colour;
+    private String shop;
+    @Column(name = "purchase_id")
+    private Integer purchaseId;
 }
